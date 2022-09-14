@@ -9,6 +9,7 @@ const ItemDetail = ({ ItemDetail }) => {
              ItemDetail.map((detail) => {
                 return (
                     <Itemdetails
+                    ItemDetail={Itemdetails}
                         key={detail.id}
                         price={detail.price}
                         description={detail.description}
@@ -36,9 +37,6 @@ const ItemDetailsContainer = ({greeting}) => {
             console.log(result)
         })
     }, [])
-    return (<>
-        <ItemDetail ItemDetail={Itemdetails} />
-      </>)
 }
 
 export default ItemDetailsContainer;
