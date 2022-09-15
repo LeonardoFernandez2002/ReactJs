@@ -1,18 +1,21 @@
-import logo from '../../logo.svg'
+import logo from '../../Media/LOGO.png'
 import CartWidget from '../CartWidget/CartWidget'
 import './style.css'
+import { Link, NavLink } from 'react-router-dom'
 const NavBar = () => {
     return(
         <div className="container">
             <div className="img">
-                <img widht={'100px'} height={'100px'} src={logo} alt="logo" />
+                <img widht={'50px'} height={'50px'} src={logo} alt="logo" />
             </div>
-            <div  className="mora"><h1>Mora Cafeteria</h1></div>
             <div className="as">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Productos</a></li>
+                    <li><NavLink className={({isActive})=>isActive ? "clase1" : "clase2"} to="/">Inicio</NavLink></li>
+                    <li><NavLink className={({isActive})=>isActive ? "clase1" : "clase2"} to="/contacto">Contacto</NavLink></li>
+                    <li><NavLink className={({isActive})=>isActive ? "clase1" : "clase2"} to="/catalogo">Catalogo</NavLink></li>
+                    <li><NavLink className={({isActive})=>isActive ? "clase1" : "clase2"} to="/productos/camisas">Camisas</NavLink></li>
+                    <li><NavLink className={({isActive})=>isActive ? "clase1" : "clase2"} to="/catalogo/zapatos">Zapatos</NavLink></li>
+                    
                 </ul>
             </div>
             <div className="boton"><button>Login</button></div>

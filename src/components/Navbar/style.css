@@ -4,19 +4,18 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    height: 110px;
-    background-color: rgb(122, 69, 31);
+    height: 80px;
+    background-color: #F2C1AE;
 }
 .img {
+    display: flex;
+    align-items: center;
     width: 100px;
     height: 100px;
-    align-items: left;
-}
-.mora h1 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: chocolate;
+    margin-left: 20px;
 }
 .as {
+    margin-left: -230px;
     display: flex;
     align-items: center;
     font-size: 20px;
@@ -31,10 +30,6 @@
 .as ul a {
     text-decoration: none;
     padding-left: 20px;
-    color: chocolate;
-}
-.as ul a:hover {
-    font-size: 25px;
 }
 
 .boton {
@@ -45,4 +40,10 @@
     color: white;
     background-color: chocolate;
     border-color: rgb(224, 152, 101);
+}
+.clase1 {
+    color: red;
+}
+.clase2 {
+    color: blue;
 }

@@ -5,19 +5,26 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import Counter from './components/counter/Counter';
 import ItemDetailsContainer from './components/detalles/ItemDetailsContainer/ItemDetailsContainer';
 import { useState } from 'react';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { ContactoPage } from './components/Contacto/ContactoPage';
 function App() {
- const [contadorPadre, setContadorPadre] = useState(0);
-  const sumarPadre = () => {
-    setContadorPadre(contadorPadre + 2)
-  }
+
   return (
-    <div className="App">
-      <NavBar/>
-      <header className="App-header">
-        <ItemListContainer greeting="holaa"/>
-        <ItemDetailsContainer greeting="hola"/>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <NavBar/>
+          <div>
+            <ItemDetailsContainer/>
+            <Routes>
+              <Route path='/' element={<ItemListContainer/>}/>
+              <Route path='/contacto' element={<ContactoPage/>}/>
+              <Route path='/productos/camisas' element={<ItemListContainer/>}/>
+              <Route path='/productos' element={<ItemListContainer/>}/>
+              <Route path='/productos/:categoryId' element={<ItemListContainer/>}/>
+            </Routes>
+          </div>
+      </div>
+    </BrowserRouter>  
   );
 }
 
